@@ -1,3 +1,4 @@
+#import libraries
 from flask import Flask, request
 from flask_cors import CORS
 import mysql.connector
@@ -8,7 +9,7 @@ import os
 
 app = Flask(__name__)
 
-
+#domain
 ENDPOINT="shopify.c1eabem1vluk.us-east-1.rds.amazonaws.com"
 PORT="3306"
 USR="admin"
