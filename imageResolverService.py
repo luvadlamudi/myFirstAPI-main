@@ -67,7 +67,7 @@ def createNewImgTag(url):
 def getSpecificImage():
     name = request.args.get('name')
 
-    for image in listOfImages:
+    for image in getAllImagesFromDB:
         if(name == image['name']):
             return createNewImgTag(image['url'])
     
@@ -78,7 +78,7 @@ def getFromQuery():
     tagName = request.args.get('tag')
     responseObj = '<div>'
 
-    for image in listOfImages:
+    for image in getAllImagesFromDB:
         for tag in image['tags']:
             if(tagName in tag):
                 responseObj += createNewImgTag(image['url'])
